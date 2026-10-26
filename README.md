@@ -12,14 +12,14 @@ and Spring AI.
 - REST API integration
 - Docker-based deployment
 
-## Tech Stack
+## Tech Stack (provisional / 候选)
 
-- Java 21
-- Spring Boot
+- Java (version to be confirmed)
+- Spring Boot (version to be confirmed)
 - Spring AI
-- MySQL
-- PostgreSQL with pgvector
-- Redis
+- PostgreSQL with pgvector (relational data + vector search)
+- Redis (optional, only when a concrete use case requires it)
+- Vue 3 · TypeScript · ECharts (frontend, candidate)
 - Docker Compose
 
 ## Architecture
@@ -30,6 +30,9 @@ business tools, and data access layer.
 The LLM interprets user requests and selects available tools.
 Java services execute authorized business operations and
 return results to the model.
+
+Detailed architecture: see [`docs/system-architecture.md`](docs/system-architecture.md).
+Product definition: see [`docs/product-charter.md`](docs/product-charter.md).
 
 ## Project Status
 
@@ -42,13 +45,14 @@ version becomes available.
 
 ## Roadmap
 
-- [ ] Initialize the Spring Boot application
+Milestone-driven; see the docs for scope and principles.
+
+- [ ] Finalize technology selection
+- [ ] Choose and build the first end-to-end vertical slice
 - [ ] Integrate an LLM provider
-- [ ] Implement business tool calling
-- [ ] Add persistent conversation history
+- [ ] Implement the controlled Agent Runtime (tool registry, validation, authorization)
 - [ ] Implement RAG
-- [ ] Add MCP integration
-- [ ] Add tests and Docker deployment
+- [ ] Add tests and Docker Compose deployment
 
 ## License
 
